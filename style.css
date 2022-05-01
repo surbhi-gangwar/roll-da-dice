@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#registration{
+    background-image: url(./images/registration\ bg.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height:100vh;
+    background-size: cover;
+    position:relative;
+    display: block;
+}
+
+.name-box{
+    position: absolute;
+    top:15%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.name-label{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: white; 
+    border: 2px solid white;
+    border-radius: 8px; 
+    padding: 10px 50px;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.input{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+.name-box input{
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    outline: none;
+    color: white;
+}
+
+.name-box button{
+    padding:2%;
+    background-color: blue;
+    width: 120px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
+}
+
+.playgame-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#game-page{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-image:url(./images/game\ page\ bg.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: absolute;
+}
+
+#display-box{
+    position: relative;
+    top:30px;
+    left:30px;
+}
+
+#player-name{
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 8px;
+    height:50px;
+    width:180px;
+    color: white;
+}
+
+#display-box p{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#timer-box{
+    position: absolute;
+    top:30%;
+    left:10%;
+}
+
+#timer-box p{
+    color: white;
+    font-size: 30px;
+}
+
+#timer-button{
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+#btn{
+    padding: 4%;
+    height: 40px;
+    width:100px;
+}
+
+.new-buttons{
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.new-btn{
+    height:50px;
+    width:180px;
+    padding : 20px 10px;
+    box-sizing: border-box;
+    display: none;
+}
+
+#new-user-btn{
+    margin-right: 8px;
+}
+
+#play-again-btn{
+    margin-left: 8px;
+}

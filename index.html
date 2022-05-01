@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ROLL-da-DICE</title>
+        <link rel="icon" type="image/jpeg" href="./images/dice favicon.jpg">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Josefin+Slab:wght@100&family=Lato&family=Orelega+One&family=Roboto+Mono:ital,wght@1,100&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/173be59187.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="main">
+            <div id="registration">
+                <div class="name-box">
+                    <div class="name-label"> <label for="name">Enter your Name<br>(3 to 15 characters)</label><br></div>
+                    <div class="input"><input type="text" id="name" required minlength="3" maxlength="15"></div>
+                    <div class="playgame-button"><button type="button" id="sub" onclick="proceed()" onkeypress="saveName(event)">PLAY GAME</button></div>
+                </div>
+            </div>
+
+            <div id="game-page">
+                <div id="display-box">
+                    <p>YOUR NAME</p>
+                    <div id="player-name"></div>
+                </div>
+                <div id="timer-box">
+                    <p id="timer">20</p>
+                    <div id="timer-icon"></div>
+                </div>
+
+                <div id="timer-button">
+                    <button type="button" id="btn" onclick="callCountdown()">ROLL AGAIN</button>
+                </div>
+
+                <div class="new-buttons">
+                    <button type="button" class="new-btn" id="new-user-btn">Play again as a new user</button>
+                    <button type="button"  class="new-btn" id="play-again-btn">play again</button>
+                </div>
+            </div>
+                
+            
+        </div>
+    </body>
+</html>
