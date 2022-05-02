@@ -32,25 +32,32 @@
                         <div id="player-name"></div>
                     </div>
                     <div id="score-box">
-                        <p>YOUR SCORE</p>
+                        <p id="score-label">YOUR SCORE</p>
                         <div id="score-display"></div>
                     </div>
                 </div>
                
                 <div id="timer-box">
                     <p id="timer">20s</p>
-                    <div id="timer-icon"></div>
                 </div>
-
-                <div id="timer-button">
-                    <button type="button" id="roll-again-btn" onclick="countdown();generateRandom()"><i class="fa-solid fa-rotate"></i>ROLL AGAIN</button>
+                
+                <div class="dice-image">
+                    <img id="dice" src="./images/dice1.png"> 
                 </div>
-                 
+                
+                <div id="roll-again-button">
+                    <button type="button" id="roll-again-btn" onclick="generateRandom()"><i class="fa-solid fa-rotate"></i>ROLL AGAIN</button>
+                </div>
+                
+ 
                 <div class="new-buttons">
                     <button type="button" class="new-btn" id="new-user-btn">Play again as a new user</button>
                     <button type="button"  class="new-btn" id="play-again-btn">play again</button>
                 </div>
-
+                
+                
+                
+                
                 
             </div>
                 

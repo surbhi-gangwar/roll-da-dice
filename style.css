@@ -137,9 +137,8 @@
 }
 
 #timer-box{
-    position: absolute;
-    top:30%;
-    left:10%;
+   margin-top: 50px; 
+   padding-left: 50px; 
 }
 
 #timer-box p{
@@ -147,11 +146,17 @@
     font-size: 30px;
 }
 
-#timer-button{
-    position: absolute;
-    top:60%;
-    left:50%;
-    transform: translateX(-50%);
+.dice-image{
+    margin-top: 30px;
+}
+
+#dice{
+    position: relative;
+    left:70%;
+}
+
+#roll-again-button{
+    margin-top: 30px;
 }
 
 #btn{
@@ -161,10 +166,9 @@
 }
 
 .new-buttons{
-    position: absolute;
-    top:70%;
-    left:50%;
-    transform: translateX(-50%);
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .new-btn{
@@ -193,3 +197,5 @@
     border: none;
     font-size: 30px;
 }
+
+
