@@ -15,29 +15,43 @@
             <div id="registration">
                 <div class="name-box">
                     <div class="name-label"> <label for="name">Enter your Name<br>(3 to 15 characters)</label><br></div>
-                    <div class="input"><input type="text" id="name" required minlength="3" maxlength="15"></div>
-                    <div class="playgame-button"><button type="button" id="sub" onclick="proceed()" onkeypress="saveName(event)">PLAY GAME</button></div>
+                    <div class="input"><input type="text" id="name" required  onkeypress="enterPressed(event)"></div>
+                    <div class="playgame-button"><button type="button" id="sub" onclick="switchPage()" >PLAY GAME</button></div>
+                </div>
+
+                <div id="error-box">
+                    <p>Your name should be in the range of 3 to 15 letters</p>
+                    <button type="button" id="error-btn" onclick="vanish()">OK</button>
                 </div>
             </div>
 
             <div id="game-page">
-                <div id="display-box">
-                    <p>YOUR NAME</p>
-                    <div id="player-name"></div>
+                <div class="header">
+                    <div id="display-box">
+                        <p>YOUR NAME</p>
+                        <div id="player-name"></div>
+                    </div>
+                    <div id="score-box">
+                        <p>YOUR SCORE</p>
+                        <div id="score-display"></div>
+                    </div>
                 </div>
+               
                 <div id="timer-box">
-                    <p id="timer">20</p>
+                    <p id="timer">20s</p>
                     <div id="timer-icon"></div>
                 </div>
 
                 <div id="timer-button">
-                    <button type="button" id="btn" onclick="callCountdown()">ROLL AGAIN</button>
+                    <button type="button" id="roll-again-btn" onclick="countdown();generateRandom()"><i class="fa-solid fa-rotate"></i>ROLL AGAIN</button>
                 </div>
-
+                 
                 <div class="new-buttons">
                     <button type="button" class="new-btn" id="new-user-btn">Play again as a new user</button>
                     <button type="button"  class="new-btn" id="play-again-btn">play again</button>
                 </div>
+
+                
             </div>
                 
             
