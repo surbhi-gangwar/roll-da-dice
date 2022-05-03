@@ -44,6 +44,7 @@ function saveNameAndDisplay(){
 function countdown(){
    if(time<0){
       document.getElementById("roll-again-btn").disabled = true;
+      document.getElementById("roll-again-btn").style.color="gray";
       const scorelabel = document.getElementById("score-label");
       scorelabel.innerHTML = "GAME OVER";
       newButtonsDisplay();
@@ -90,7 +91,8 @@ function reset(){
    time=20;
    const dice = document.getElementById("dice");
    dice.src = "./images/dice1.png";
-   document.getElementById("roll-again-btn").disabled = false; 
+   document.getElementById("roll-again-btn").disabled = false;
+   document.getElementById("roll-again-btn").style.color="white"; 
    vanishNewButtons();  
 }
 

@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Josefin+Slab:wght@100&family=Lato&family=Orelega+One&family=Roboto+Mono:ital,wght@1,100&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+
         <script src="https://kit.fontawesome.com/173be59187.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -23,6 +24,13 @@
                     <p>Your name should be in the range of 3 to 15 letters</p>
                     <button type="button" id="error-btn" onclick="vanish()">OK</button>
                 </div>
+
+                <div id="footer">
+                    
+                        <div class="heading1">welcome to</div>
+                        <div class="heading2">roll da dice</div>
+            
+                </div>
             </div>
 
             <div id="game-page">
@@ -36,17 +44,19 @@
                         <div id="score-display"></div>
                     </div>
                 </div>
-               
-                <div id="timer-box">
-                    <p id="timer">20s</p>
-                </div>
                 
-                <div class="dice-image">
-                    <img id="dice" src="./images/dice1.png"> 
-                </div>
-                
-                <div id="roll-again-button">
-                    <button type="button" id="roll-again-btn" onclick="generateRandom()"><i class="fa-solid fa-rotate"></i>ROLL AGAIN</button>
+                <div id="mid-main">
+                    <div id="timer-box">
+                        <p id="timer">20s</p>
+                    </div>
+                    
+                    <div class="dice-image">
+                        <img id="dice" src="./images/dice1.png"> 
+                    </div>
+                    
+                    <div id="roll-again-button">
+                        <button type="button" id="roll-again-btn" onclick="generateRandom()"><i class="fa-solid fa-rotate"></i>ROLL AGAIN</button>
+                    </div>    
                 </div>
                 
  
