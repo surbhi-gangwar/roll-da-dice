@@ -18,6 +18,7 @@ function switchPage(){
    regist.style.display = "none";             
    gamePage.style.display="block";
    saveNameAndDisplay();
+   initialScore();
    }
    else{
       displayErrorBox();
@@ -45,8 +46,9 @@ function countdown(){
       document.getElementById("roll-again-btn").disabled = true;
       const scorelabel = document.getElementById("score-label");
       scorelabel.innerHTML = "GAME OVER";
-      alert("GAME OVER: you scored a total of "+sum);
       newButtonsDisplay();
+      alert("GAME OVER: you scored a total of "+sum);
+      return;
    }
    else{
       const timer = document.getElementById("timer");
@@ -60,11 +62,11 @@ function countdown(){
 function generateRandom(){   
    var random = Math.floor((Math.random() * 6) + 1);
    sum = sum + random;
-   const score = document.getElementById("score-display");
-   score.innerHTML= sum;
    const dice = document.getElementById("dice");
    dice.src = "./images/dice"+ random + ".png";
-
+   const score = document.getElementById("score-display");
+   score.innerHTML= sum;
+   
    if(time===20){
       countdown();
    }
@@ -77,6 +79,28 @@ function newButtonsDisplay(){
    playagaintbn.style.display="block";
 }   
 
+function initialScore(){
+   const score = document.getElementById("score-display");
+   score.innerHTML= "0";
+}
 
+function reset(){
+   initialScore();
+   sum=0;
+   time=20;
+   const dice = document.getElementById("dice");
+   dice.src = "./images/dice1.png";
+   document.getElementById("roll-again-btn").disabled = false; 
+   vanishNewButtons();  
+}
 
+function vanishNewButtons(){
+   const newuserbtn = document.getElementById("new-user-btn");
+   const playagaintbn = document.getElementById("play-again-btn");
+   newuserbtn.style.display="none";
+   playagaintbn.style.display="none";
+}
 
+function reloadCompletely(){
+   location.reload();
+}
