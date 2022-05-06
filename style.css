@@ -6,268 +6,234 @@
 #registration{
     background-image: url(./images/registration\ bg.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height:100vh;
-    background-size: cover;
-    position:relative;
     display: block;
+    position: relative;
+}
+
+.regist-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.heading1{
+    font-size: 70px;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 8px white;
+    color:white;
+    font-family: 'Koulen';
+}
+
+.regist-mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box{
+    margin-top: 30px;
+    background-color: #24243C;
+    padding: 40px;
+    width: 500px;
+    position: relative;
+    border-radius: 17px;
+    box-shadow:  -5px -5px 20px -5px #24243C;
 }
 
 .name-box{
-    position: absolute;
-    top:35%;
-    left:50%;
-    transform: translateX(-50%);
-}
-.name-label{
     display: flex;
     justify-content: center;
-    background-color: transparent;
-    color: white; 
-    border: 2px solid white;
-    border-radius: 8px; 
-    padding: 10px 50px;
-    font-family: 'Electrolize', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
 }
 
-.input{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    
-}
 #name{
-    width: 100%;
-    height: 50px;
-    padding: 12px;
-    box-sizing: border-box;
-    border: 2px solid white;
-    border-radius: 8px;
-    background-color: transparent;
+    width: 400px;
+    padding:10px;
+    border-radius: 7px;
+    border: none;
+    background-color:#404156;
     outline: none;
     color: white;
     font-family: 'Electrolize', sans-serif;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 1px;
+    text-align: center;
+   
+}
+
+
+.playgame-button{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #sub{
-    padding:2%;
-    background-color: rgb(39, 39, 160);
-    width: 150px;
-    height: 70px;
-    box-sizing: border-box;
-    border: 2px solid white;
+    background-color: #F16879;
+    border: none;
     border-radius: 8px;
     color: white;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     letter-spacing: 2px;
     font-size: 20px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow:  5px 5px -5px #F16879;
 }
-
-.playgame-button{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-
 
 #error-box{
-    background-color:white;
-    padding : 2%;
-    width:120px;
+    background-color:rgb(202, 197, 197);
+    padding : 20px 30px;
+    width: 330px;
     position: absolute;
-    top:70%;
+    top:50%;
     left:50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-50%);
+    box-shadow:  -4px -3px 4px -2px rgba(0,0,0,0.1);
     display: none;
 }
 
+#error-box p{
+    text-align: center;
+}
+.button-holder{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
 #error-box button{
-    position: relative;
-    left:50%;
-    transform: translateX(-50%);
-    padding:4px;
+    padding:8px; 
     background-color: red;
     color: white;
 }
 
-#footer{
-    color: white;
-    position: absolute;
-    top:10%;
-    left:50%;
-    transform: translateX(-50%);
-    text-transform: uppercase;
-    font-family: sans-serif ;
-}
-
-
-.heading1{
-    font-size: 60px;
-    letter-spacing: 4px;
-    text-shadow: 4px 4px 8px white;
-    
-}
-
-.heading2{
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: rgb(168, 219, 219);
-    
-}
-
 #game-page{
     display: none;
+    background-image:url(./images/game-page-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100vh;
-    background-image:url(./images/game\ page\ bg.webp);
-    background-repeat: no-repeat;
-    background-size:cover;
-    position: absolute;
 }
 
 .header{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.header h1{
+    color: white;
+}
+
+.name-score-box{
     display: flex;
     justify-content: space-between;
-    
-}
-#display-box{
+    padding: 30px 165px;
     margin-top: 30px;
-    margin-left: 50px;
-}
-
-#score-box{
-    margin-top: 30px;
-    margin-right: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-#score-box p{
-    color: white;
 }
 
 #player-name ,#score-display{
-    background-color: black;
-    border: 2px solid white;
+    background-color: white;
     border-radius: 8px;
-    height:50px;
-    width:180px;
-    color: white;
+    height:60px;
+    width:220px;
+    color: black;
     display: flex;
-    box-sizing: border-box;
-}
-
-#player-name{
-    font-size: 25px;
-    padding: 2%;
-}
-
-#score-display{
-    font-size: 40px;
+    align-items: center;
     justify-content: center;
-    text-align: center;
+    font-size: 30px;
+    opacity: 0.3;
 }
-#display-box p{
+
+#display-box p,#score-box p{
+    text-align: center;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-#mid-main{
-    margin-top: 80px;
-    position: relative;
-    left:5%;
-    width:80%;
-    padding: 20px 30px;
-    margin-left:30px; 
-    box-shadow: 10px 10px 30px 20px rgb(73, 71, 71);
-}
-#timer-box{ 
-   position: absolute;
-   left:10%;
+.upper{
+    display: flex;
+    padding: 20px 90px;
+    justify-content: space-between
 }
 
-#timer-box p{
+#timer{
+    font-size: 40px;
     color: white;
-    font-size: 60px;
-
+    margin-left: 140px;
 }
 
 .dice-image{
-    margin-top: 30px;
+    margin-right: 105px;
 }
-
 #dice{
-    position: relative;
-    left:70%;
+    width:160px;
+    cursor: pointer;
 }
 
 #roll-again-button{
-    margin-top: 30px;
-    display: inline-block;
-    position: relative;
-    left:42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
 }
 
 #roll-again-button:hover{
     transform: scale(1.2);
     transition: all 1s;
 }
-      
-#btn{
-    padding: 4%;
-    height: 40px;
-    width:100px;
-}
-
-.new-buttons{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.new-btn{
-    height:50px;
-    width:180px;
-    padding : 20px 10px;
-    box-sizing: border-box;
-    display: none;
-}
-
-#new-user-btn{
-    margin-right: 8px;
-    font-size: 15px;
-    padding-bottom: 3%;
-    font-weight: bold;
-}
-
-#play-again-btn{
-    margin-left: 8px;
-    font-size: 15px;
-    padding-bottom: 3%;
-    font-weight: bold;
-}
 
 #roll-again-btn{
-    position: relative;
-    top:60%;
-    left:50%;
-    transform: translateX(-50%);
     background:none;
     color: white;
     border: none;
     font-size: 30px;
+    cursor: pointer;
 }
+
+.new-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-user-btn{
+    margin-right: 30px;
+    background-color: rgb(238, 25, 25);
+    border: none;
+    color: white;
+    display: none;
+}
+
+#play-again-btn{
+    background-color: green;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    display:none ;
+}
+.new-btn{
+    height: 60px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
 
 

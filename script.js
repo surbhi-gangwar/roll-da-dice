@@ -43,9 +43,10 @@ function saveNameAndDisplay(){
 
 function countdown(){
    if(time<0){
-      document.getElementById("roll-again-btn").disabled = true;
-      document.getElementById("roll-again-btn").style.color="gray";
+      const rollagainbtn= document.getElementById("roll-again-btn");
       const scorelabel = document.getElementById("score-label");
+      rollagainbtn.disabled = true;
+      rollagainbtn.style.color="gray";
       scorelabel.innerHTML = "GAME OVER";
       newButtonsDisplay();
       alert("GAME OVER: you scored a total of "+sum);
@@ -64,7 +65,7 @@ function generateRandom(){
    var random = Math.floor((Math.random() * 6) + 1);
    sum = sum + random;
    const dice = document.getElementById("dice");
-   dice.src = "./images/dice"+ random + ".png";
+   dice.src = "./images/dice-"+ random + ".png";
    const score = document.getElementById("score-display");
    score.innerHTML= sum;
    
@@ -90,9 +91,12 @@ function reset(){
    sum=0;
    time=20;
    const dice = document.getElementById("dice");
-   dice.src = "./images/dice1.png";
-   document.getElementById("roll-again-btn").disabled = false;
-   document.getElementById("roll-again-btn").style.color="white"; 
+   dice.src = "./images/dice-1.png";
+   const rollagainbtn = document.getElementById("roll-again-btn");
+   rollagainbtn.disabled = false;
+   rollagainbtn.style.color="white"; 
+   const scorelabel = document.getElementById("score-label");
+   scorelabel.innerHTML="YOUR SCORE";
    vanishNewButtons();  
 }
 

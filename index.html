@@ -5,36 +5,38 @@
         <link rel="icon" type="image/jpeg" href="./images/dice favicon.jpg">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Josefin+Slab:wght@100&family=Lato&family=Orelega+One&family=Roboto+Mono:ital,wght@1,100&family=Saira+Stencil+One&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Josefin+Slab:wght@100" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Electrolize&family=Josefin+Slab:wght@100&family=Koulen&family=Lato&family=Orelega+One&family=Roboto+Mono:ital,wght@1,100&family=Saira+Stencil+One&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/173be59187.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="main">
             <div id="registration">
-                <div class="name-box">
-                    <div class="name-label"> <label for="name">Enter your Name<br>(3 to 15 characters)</label><br></div>
-                    <div class="input"><input type="text" id="name" required  onkeypress="enterPressed(event)"></div>
-                    <div class="playgame-button"><button type="button" id="sub" onclick="switchPage()" >PLAY GAME</button></div>
+                <div class="regist-header">
+                    <p class="heading1">ROLL-da-DICE</p>
                 </div>
+
+                <div class="regist-mid">
+                    <div class="input-box">
+                        <div class="name-box"><input type="text" id="name" required placeholder="Enter your name(3 to 15 characters)" onkeypress="enterPressed(event)"></div> 
+                        <div class="playgame-button"><button type="button" id="sub" onclick="switchPage()" >PLAY GAME</button></div>
+                     </div>
+                </div>
+                
 
                 <div id="error-box">
-                    <p>Your name should be in the range of 3 to 15 letters</p>
-                    <button type="button" id="error-btn" onclick="vanish()">OK</button>
-                </div>
-
-                <div id="footer">
-                    
-                        <div class="heading1">welcome to</div>
-                        <div class="heading2">roll da dice</div>
-            
+                    <p><i class="fa-solid fa-triangle-exclamation"></i>Your name should be in the range of 3 to 15 letters!</p>
+                    <div class="button-holder"><button type="button" id="error-btn" onclick="vanish()">OK</button></div>
                 </div>
             </div>
 
             <div id="game-page">
                 <div class="header">
+                    <h1>ROLL-da-DICE</h1>
+                </div>
+
+                <div class="name-score-box">
                     <div id="display-box">
                         <p>YOUR NAME</p>
                         <div id="player-name"></div>
@@ -44,31 +46,27 @@
                         <div id="score-display"></div>
                     </div>
                 </div>
-                
+                    
                 <div id="mid-main">
-                    <div id="timer-box">
-                        <p id="timer">20s</p>
+                    <div class="upper">
+                        <div id="timer-box">
+                            <p id="timer"><i class="fa-regular fa-hourglass-end"></i>20s</p>
+                        </div>
+
+                        <div class="dice-image">
+                            <img id="dice" src="./images/dice-1.png"> 
+                        </div>
                     </div>
-                    
-                    <div class="dice-image">
-                        <img id="dice" src="./images/dice1.png"> 
-                    </div>
-                    
+                        
                     <div id="roll-again-button">
-                        <button type="button" id="roll-again-btn" onclick="generateRandom()"><i class="fa-solid fa-rotate"></i>ROLL AGAIN</button>
+                        <button type="button" id="roll-again-btn" onclick="generateRandom()">ROLL AGAIN</button>
                     </div>    
                 </div>
                 
- 
                 <div class="new-buttons">
-                    <button type="button" class="new-btn" id="new-user-btn" onclick="reloadCompletely()">Play again as a new user</button>
-                    <button type="button"  class="new-btn" id="play-again-btn" onclick="reset()">play again</button>
-                </div>
-                
-                
-                
-                
-                
+                    <button type="button" class="new-btn" id="new-user-btn" onclick="reloadCompletely()">New User</button>
+                    <button type="button"  class="new-btn" id="play-again-btn" onclick="reset()">Play Again</button>
+                </div>    
             </div>
                 
             
