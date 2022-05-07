@@ -9,11 +9,11 @@ function enterPressed(event){
 }
 }
 
-function switchPage(){
-   const name= document.getElementById("name");
-   const namelength = name.value.length;  
+function switchPage(){ 
    const regist = document.getElementById("registration");
    const gamePage = document.getElementById("game-page");
+   const name= document.getElementById("name");
+   const namelength = name.value.length; 
    if(namelength>3 && namelength<15){
    regist.style.display = "none";             
    gamePage.style.display="block";
@@ -62,17 +62,17 @@ function countdown(){
 }
 
 function generateRandom(){   
+   const dice = document.getElementById("dice");
+   const score = document.getElementById("score-display");
    var random = Math.floor((Math.random() * 6) + 1);
    sum = sum + random;
-   const dice = document.getElementById("dice");
    dice.src = "./images/dice-"+ random + ".png";
-   const score = document.getElementById("score-display");
    score.innerHTML= sum;
    
    if(time===20){
       countdown();
    }
-   }
+ }
 
 function newButtonsDisplay(){
    const newuserbtn = document.getElementById("new-user-btn");
@@ -97,6 +97,8 @@ function reset(){
    rollagainbtn.style.color="white"; 
    const scorelabel = document.getElementById("score-label");
    scorelabel.innerHTML="YOUR SCORE";
+   const timer= document.getElementById("timer");
+   timer.innerHTML= (time+"s");
    vanishNewButtons();  
 }
 
